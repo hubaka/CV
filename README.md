@@ -1,1 +1,3 @@
 # histogram
+
+stage 1:
