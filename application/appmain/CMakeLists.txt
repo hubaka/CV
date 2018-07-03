@@ -7,16 +7,7 @@ set_project_id("_PROJECT_NAME_")
 # List with modules we depend on
 #
 add_folder_dependencies(
-	"opencv"
-	# "resource"
-	# "mainwind"
-	# "igrid"
-	# "babygrid"
-	# "errhandle"
-	# "toolbar"
-	# "dbms"
-	# "sqlite"
-	# "encrypter"
+	"clrapp"
 )
 
 add_lib_dependencies(
@@ -29,17 +20,40 @@ add_lib_dependencies(
 add_public_header_files(
 	# "appmain.h"
 )
+
+#
+#
+#
+add_resource_files(
+	"App.config"
+	"application.resx"
+	"Properties/Resources.resx"
+	"Properties/Settings.settings"
+)
+
+#
+#
+#
+add_designer_cs_properties(
+	"application.resx"
+	"Properties/Resources.resx"
+)
 #
 # List of source files, relative to the module source folder
 #
 add_source_files(
-	"appmain.cpp"
+	 "application.cs"
+	 "application.Designer.cs"
+	 "Program.cs"
+	 "Properties/AssemblyInfo.cs"
+	 "Properties/Resources.Designer.cs"
+	 "Properties/Settings.Designer.cs"
 )
 
 
-add_libs_to_exe(
-	${DEP_LIBS}
-)
+# add_libs_to_exe(
+	# ${DEP_LIBS}
+# )
 
 #
 # Build and install library
