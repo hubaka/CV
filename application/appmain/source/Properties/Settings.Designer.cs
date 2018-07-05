@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TweetBankWPF.Properties
+namespace mainApplication.Properties
 {
 
 

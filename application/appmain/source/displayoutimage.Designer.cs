@@ -1,4 +1,4 @@
-﻿namespace TweetBankWPF
+﻿namespace mainApplication
 {
     partial class displayoutimage
     {
