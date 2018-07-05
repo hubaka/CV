@@ -18,7 +18,7 @@ int TweetBankCore::tweet()
 	//printf("Hello world\n");
 	// Read an image
 	// (in Brown, use “C:/sw/opencv/sources/samples/data/lena.jpg”)
-	cv::Mat image = cv::imread("E:/gitClone/CV/testimages/dolores.jpg");
+	cv::Mat image = cv::imread("C:/Users/akathire/Documents/pIm/work/Attendance/git/hg/CV/testimages/dolores.jpg");
 	if (image.empty()) {
 		std::cout << "Hey! Can't read the image!" << std::endl;
 		system("PAUSE");
@@ -27,10 +27,11 @@ int TweetBankCore::tweet()
 	// Create image window named "My Image". (You actually don't have to do
 	// this step, but this command allows you to set properties of the window,
 	// such as its location, or whether you can resize it.)
-	cv::namedWindow("My Image");
+	//cv::namedWindow("My Image");
 	// Show the image in the window
-	cv::imshow("My Image", image);
+	//cv::imshow("My Image", image);
 	// Wait for 5000 ms (0 means wait until a keypress)
-	cv::waitKey(5000);
+	//cv::waitKey(5000);
+	cv::imwrite("C:/Users/akathire/Documents/pIm/work/Attendance/git/hg/CV/testimages/out/dolores.jpg", image);
 	return 1;
 }

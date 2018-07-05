@@ -25,6 +25,9 @@ namespace TweetBankWPF
             
             int retVal = mTBCLR.tweet();
             label1.Text = retVal.ToString();
+            displayoutimage outImage = new displayoutimage();
+            outImage.displayoutput();
+            outImage.ShowDialog();
         }
     }
 }

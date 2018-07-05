@@ -27,6 +27,7 @@ add_public_header_files(
 add_resource_files(
 	"App.config"
 	"application.resx"
+	"displayoutimage.resx"
 	"Properties/Resources.resx"
 	"Properties/Settings.settings"
 )
@@ -38,6 +39,9 @@ add_designer_cs_properties(
 	"application.cs"
 	"application.Designer.cs"
 	"application.resx"
+	"displayoutimage.cs"
+	"displayoutimage.Designer.cs"
+	"displayoutimage.resx"
 	"Properties/Resources.resx"
 )
 #
@@ -46,6 +50,8 @@ add_designer_cs_properties(
 add_source_files(
 	 "application.cs"
 	 "application.Designer.cs"
+	 "displayoutimage.cs"
+	 "displayoutimage.Designer.cs"
 	 "Program.cs"
 	 "Properties/AssemblyInfo.cs"
 	 "Properties/Resources.Designer.cs"
