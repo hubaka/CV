@@ -33,7 +33,7 @@ namespace mainApplication
             {
                 inputfilepath = open.FileName;
                 int pos = inputfilepath.LastIndexOf("\\");
-                outputfilepath = inputfilepath.Insert(pos+1,"out_");
+                outputfilepath = inputfilepath.Insert(pos+1,"sobel_out_");
                 int retVal = m_cvApp.executeSobelFilter(inputfilepath, outputfilepath);
                 displayoutimage outImage = new displayoutimage("Sobel Filter");
                 outImage.displayoutput(outputfilepath);
@@ -41,5 +41,24 @@ namespace mainApplication
             }
         }
 
+        private void btn_prewittFilter_Click(object sender, EventArgs e)
+        {
+            string inputfilepath = null;
+            string outputfilepath = null;
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // input image types  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                inputfilepath = open.FileName;
+                int pos = inputfilepath.LastIndexOf("\\");
+                outputfilepath = inputfilepath.Insert(pos + 1, "prewitt_out_");
+                int retVal = m_cvApp.executePrewittFilter(inputfilepath, outputfilepath);
+                displayoutimage outImage = new displayoutimage("Prewitt Filter");
+                outImage.displayoutput(outputfilepath);
+                outImage.ShowDialog();
+            }
+        }
     }
 }

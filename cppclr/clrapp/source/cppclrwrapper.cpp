@@ -23,4 +23,14 @@ namespace cppclrwrapper
 	   int retVal = filter->execute(inputstr, outputstr);
 	   return 1;
    }
+
+   int ClrWrapper::executePrewittFilter(System::String^ inputFilePath, System::String^ ouputFilePath)
+   {
+	   prewittFilter *filter = new prewittFilter();
+	   char* inputstr = (char*)(void*)Marshal::StringToHGlobalAnsi(inputFilePath);
+	   char* outputstr = (char*)(void*)Marshal::StringToHGlobalAnsi(ouputFilePath);
+
+	   int retVal = filter->execute(inputstr, outputstr);
+	   return 1;
+   }
 }

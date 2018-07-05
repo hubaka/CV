@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.btn_SobelFilter = new System.Windows.Forms.Button();
+            this.btn_prewittFilter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_SobelFilter
             // 
             this.btn_SobelFilter.Location = new System.Drawing.Point(11, 22);
-            this.btn_SobelFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_SobelFilter.Margin = new System.Windows.Forms.Padding(2);
             this.btn_SobelFilter.Name = "btn_SobelFilter";
             this.btn_SobelFilter.Size = new System.Drawing.Size(66, 26);
             this.btn_SobelFilter.TabIndex = 0;
@@ -42,13 +43,24 @@
             this.btn_SobelFilter.UseVisualStyleBackColor = true;
             this.btn_SobelFilter.Click += new System.EventHandler(this.btn_SobelFilter_Click);
             // 
+            // btn_prewittFilter
+            // 
+            this.btn_prewittFilter.Location = new System.Drawing.Point(11, 78);
+            this.btn_prewittFilter.Name = "btn_prewittFilter";
+            this.btn_prewittFilter.Size = new System.Drawing.Size(66, 26);
+            this.btn_prewittFilter.TabIndex = 1;
+            this.btn_prewittFilter.Text = "Pre-F";
+            this.btn_prewittFilter.UseVisualStyleBackColor = true;
+            this.btn_prewittFilter.Click += new System.EventHandler(this.btn_prewittFilter_Click);
+            // 
             // application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(212, 206);
+            this.Controls.Add(this.btn_prewittFilter);
             this.Controls.Add(this.btn_SobelFilter);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "application";
             this.Text = "Application";
             this.ResumeLayout(false);
@@ -58,6 +70,7 @@
         #endregion
 
         private System.Windows.Forms.Button btn_SobelFilter;
+        private System.Windows.Forms.Button btn_prewittFilter;
     }
 }
 
