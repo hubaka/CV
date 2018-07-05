@@ -35,6 +35,8 @@ add_resource_files(
 #
 #
 add_designer_cs_properties(
+	"application.cs"
+	"application.Designer.cs"
 	"application.resx"
 	"Properties/Resources.resx"
 )
